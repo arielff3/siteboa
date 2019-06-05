@@ -5,8 +5,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="icon" href="img/fav.png">
+<!--Materialize css-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<!-- GOOGLE FONTS-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- FONT AWESOME-->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
@@ -15,11 +19,11 @@
 <header>
     <!-- Menu mobile -->
     <ul class="side-nav" id="mobile-demo">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sobre">Sobre o Boa Forma</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#unidades">Unidades</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a class="hide-menu" href="#home">Home</a></li>
+            <li><a class="hide-menu" href="#sobre">Sobre o Boa Forma</a></li>
+            <li><a class="hide-menu" href="#servicos">Serviços</a></li>
+            <li><a class="hide-menu" href="#unidades">Unidades</a></li>
+            <li><a class="hide-menu" href="#contato">Contato</a></li>
     </ul>
     <div class="navbar-fixed">
     <nav class="navbar z-depth-0">
@@ -42,15 +46,15 @@
 </div>
 </header>
 <!--Home-->
-<section class="home bloco scrollspy" id="home">
+<section class="home scrollspy" id="home">
     <div class="row container banner">
         <div class="col s12 center">
         <h2 class="white-text">O melhor treinamento funcional da região</h2>
         <p class="white-text">Um novo conceito em prevenção, promoção e reabilitação da saúde para quem busca 
             melhora do condicionamento e emagrecimento, além de ser divertido e desafiador. Quer experimentar?</p>
         <div class="row">
-            <a class="btn btn-large blue-logo">Sobre nós</a>
-            <a class="btnc btn-large white black-text">Contato</a>
+            <a href="#sobre" class="btn btn-large blue-logo">Sobre nós</a>
+            <a href="#contato" class="btnc btn-large white black-text">Contato</a>
         </div>
      </div>
     </div>
@@ -61,10 +65,10 @@
 <section class="sobre bloco scrollspy" id="sobre">
     <div class="row container">
         <div class="col s12">
-            <h2 class="light center">Sobre Nós</h2>
+            <h2 class="light center titulo">Sobre Nós</h2>
         </div>
         <div class="col s12 l6">
-            <p class="light">
+            <p class="light paragrafo">
                     A Centro Boa Forma chegou a Itabuna e região trazendo um novo conceito
                     em prevenção, promoção e reabilitação da saúde. Localizada no centro da cidade, 
                     conta com fácil estacionamento, salas amplas e climatizadas, ambiente confortável 
@@ -117,11 +121,11 @@
 </section>
 
 <!-- Serviços-->
-<section class="servicos bloco scrollSpy" id="servicos">
+<section class="servicos bloco scrollspy" id="servicos">
     <div class="row container">
         <div class="col s12 center">
-            <h2 class="light">Serviços</h2>
-            <p class="light">
+            <h2 class="light titulo white-text">Serviços</h2>
+            <p class="light paragrafo white-text">
             Suas instalações foram projetadas e equipadas sob medida, dentro dos padrões de acessibilidade, 
             para acolher principalmente pessoas com limitações funcionais. A clínica dispõe de uma equipe profissional 
             qualificada e com experiência no mercado, prezando sempre por tratamentos individualizados e baseados em evidências científicas.
@@ -255,8 +259,304 @@
                 <a class="btn blue-logo modal-action modal-close">Sair</a>
             </div>
         </div>
+
+        <!-- Btn-Horários -->
+        <div class="row center btn-horario">
+            <a href="#modal-horario" class="btn blue-logo modal-trigger waves-effect waves-black btn-large light">
+                <i class="material-icons left">timer</i>
+                    Quadro de Horários</a>
+        </div>
+        <!-- Modal horários-->
+        <div class="modal" id="modal-horario">
+            
+            <div class="modal-content">
+                <h5 clas="light">Quadro de horários</h5>
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#tab-pilates">Pilates</a> </li>
+                    <li class="tab col s3"><a href="#tab-nutricao">Nutrição</a> </li>
+                    <li class="tab col s3"><a href="#tab-fisio">Fisioterapia</a> </li>
+                    <li class="tab col s3"><a href="#tab-funcional">Funcional</a> </li>
+                </ul>
+            <!--Tabelas Modal-->
+            <table class="striped responsive-table" id="tab-pilates">
+                <thead>
+                    <th></th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th>Sábado</th>
+                    <th>Domingo</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>6:00 às 10:00</td> 
+                        <td>Pilates</td>
+                        <td></td>
+                        <td>Pilates</td>
+                        <td></td>
+                        <td>Pilates</td>
+                        <td>Pilates</td>
+                        <td></td> 
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="striped responsive-table" id="tab-nutricao">
+                    <thead>
+                        <th></th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:00 às 13:00</td> 
+                            <td>Nutrição</td>
+                            <td>Nutrição</td>
+                            <td></td>
+                            <td></td>
+                            <td>Nutrição</td>
+                            <td></td>
+                            <td></td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modal-footer">
+              <a class="btn btn-medium modal-action modal-close">Sair</a>
+            </div>
+        </div>
+</section>
+
+<!-- Unidades -->
+<section class="unidades bloco scrollspy" id="unidades">
+        <div class="row container">
+                <div class="col s12 center">
+                    <h2 class="light titulo white-text">Unidades</h2>
+                    <p class="light white-text paragrafo">
+                         Para oferecer serviços de acordo com a realidade e necessidade de cada região do Brasil, 
+                         o centro boa forma possui unidades em quatro estados. Com atividades permanentes os espaços 
+                         físicos buscam oferecer facilidade de acesso e atendimento de qualidade.
+                    </p>
+                </div>
+            </div>
+                
+        <div class="row container">
+            <!-- Card Bh-->
+            <article class="col s12 l6">
+                <div class="card horizontal">
+                    <div class="card-image card-image-horizontal">
+                        <img src="img/bh.jpg" alt="cardBh">
+                    </div>
+
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <h3 class="card-title light">Belo Horizonte</h3>
+                            <p class="light">
+                                <i class="material-icons left">phone</i> 123 321 123 <br>
+                                <i class="material-icons left">email</i> bh@boaforma.com <br>
+                                <i class="material-icons left">location_on</i> Av. Belo Horizonte, 123
+                            </p>
+                        </div>
+                    </div>
+                </div>                
+            </article>
+
+            <!-- Card Salvador-->
+            <article class="col s12 l6">
+                    <div class="card horizontal">
+                        <div class="card-image card-image-horizontal">
+                            <img src="img/salvador.jpg" alt="cardSa">
+                        </div>
+    
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <h3 class="card-title light">Salvador</h3>
+                                <p class="light">
+                                    <i class="material-icons left">phone</i> 123 321 123 <br>
+                                    <i class="material-icons left">email</i> Sa@boaforma.com <br>
+                                    <i class="material-icons left">location_on</i> Av. Salvador, 123
+                                </p>
+                            </div>
+                        </div>
+                    </div>                
+            </article>
+
+            <!-- Card Sp-->
+            <article class="col s12 l6">
+                    <div class="card horizontal">
+                        <div class="card-image card-image-horizontal">
+                            <img src="img/sp.jpg" alt="cardSp">
+                        </div>
+    
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <h3 class="card-title light">São Paulo</h3>
+                                <p class="light">
+                                    <i class="material-icons left">phone</i> 123 321 123 <br>
+                                    <i class="material-icons left">email</i> Sp@boaforma.com <br>
+                                    <i class="material-icons left">location_on</i> Av. São Paulo, 123
+                                </p>
+                            </div>
+                        </div>
+                    </div>                
+             </article>
+
+             <!-- Card Rj-->
+            <article class="col s12 l6">
+                    <div class="card horizontal">
+                        <div class="card-image card-image-horizontal">
+                            <img src="img/rj.jpg" alt="cardRj">
+                        </div>
+    
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <h3 class="card-title light">Rio de Janeiro</h3>
+                                <p class="light">
+                                    <i class="material-icons left">phone</i> 123 321 123 <br>
+                                    <i class="material-icons left">email</i> rj@boaforma.com <br>
+                                    <i class="material-icons left">location_on</i> Av. Rio de Janeiro, 123
+                                </p>
+                            </div>
+                        </div>
+                    </div>                
+            </article>
+        </div>
+
+</section>
+
+<!--Contato-->
+<section class="contato bloco scrollspy" id="contato">
+    <div class="row container">
+        <div class="col s12">
+            <h2 class="titulo light center">Contato</h2>
+        </div>
+         <!-- Mapa-->
+        <div class="col s12 l4 hide-on-med-only">
+            <div class="transparent mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.5335358682346!2d-38.43362358561653!3d-12.144035647022982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716bdb2b3865f47%3A0x4e12504b1228c60c!2sJocimili+Farm%C3%A1cia!5e0!3m2!1spt-BR!2sbr!4v1559758615580!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- Redes Sociais -->
+        <div class="col s12 m6 l4">
+            <div class="redes white-text">
+                <h4 class="light">REDES SOCIAIS </h4>
+                <p class="light">
+                        Fique por dentro das novidades, receba dicas, ou simplesmente mostre ao mundo 
+                        que você faz parte desse projeto sensacional!
+                </p>
+                <a herf="#" class="btn-floating waves-effect waves-purple blue-logo"><i class="fa fa-facebook"></i></a>
+                <a herf="#" class="btn-floating waves-effect waves-purple blue-logo"><i class="fa fa-google"></i></a>
+                <a herf="#" class="btn-floating waves-effect waves-purple blue-logo"><i class="fa fa-twitter"></i></a>
+                
+                <h4 class="light">Endereço </h4>
+                <p class="light">
+                        Rua paraíso, 123 <br>
+                        Centro, Itabuna - Ba </p>
+
+                <h4 class="light">Contatos </h4>
+                <p class="light">
+                        (73) 123456987 <br>
+                        (45) 123456789 <br>
+                        (56) 234567678 </p>
+            </div>
+        </div>
+        <!--Formulário-->
+        <div class="col s12 m6 l4">
+            <div class="formulario white black-text">
+                <h4>FALE CONOSCO</h4>
+                <p class="light">Dúvidas, criticas ou sujestões? Entre em contato conosco, seu feedback é muito importante.</p>
+                
+                <form action="enviar-email.php" method="POST">
+                    <div class="input-field">
+                        <input type="text" name="name" id="name">
+                        <label for="name">Seu nome</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" name="email" id="email">
+                        <label for="email">Seu email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="assunto" id="assunto">
+                        <label for="assunto">Assunto</label>
+                    </div>
+                    <div class="input-field">
+                       <textarea class="materialize-textarea" id="mensagem" name="mensagem"></textarea>
+                       <label for="mensagem">Mensagem</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-medium blue-logo">Enviar</button>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- Depoimentos-->
+<section class="depoimentos blue-logo">
+    <div class="row container">
+        <div class="col s12">
+            <h2 class="light center titulo white-text">Depoimentos</h2>
+        </div>
+        <div class="col s12 m4 center">
+            <img class="circle responsive-img " src="img/depo1.jpg" alt="Dep-um"><br>
+            <p class="light white-text">"Conheci o treinamento funcional e a metodologia Centro Boa Forma por indicação de um amigo. Execelentes profissionais e super atenciosos!"</p>
+            <h4 class="light white-text">Felipe Souza</h4>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+        </div>
+
+        <div class="col s12 m4 center">
+            <img class="circle responsive-img " src="img/depo2.jpg" alt="Dep-um">
+            <p class="light white-text"> "Treinar com motivação e satisfação pelos resultados obtidos são os motivos que me conquistaram e me mantém no Centro Boa Forma."</p>
+            <h4 class="light white-text">Ariel Franco</h4>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+        </div>
+
+        <div class="col s12 m4 center">
+            <img class="circle responsive-img " src="img/depo3.jpg" alt="Dep-um">
+            <p class="light white-text"> "Gostei muito da oficina e das aulas, superou minhas expectativas. A empresa e os treinamentos foram ótimos!"</p>
+            <h4 class="light white-text">Thainá Aimê</h4>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+            <i class="material-icons">star</i>
+        </div>
+    </div>
+</section>
+ 
+<!-- Rodapé -->
+<footer class="rodape"> 
+        <div class="row center container">
+            <div class="col s12">
+                <img src="img/logo.png" alt="logo_img">
+                <p class="light white-text">© Centro Boa Forma 2019 - Todos os direitos reservados</p>
+            </div>
+
+        </div>
+</footer>
+
+
+
+
+
+
+
 
 
  <!-- JQUERY -->
@@ -279,7 +579,18 @@
         $('.materialboxed').materialbox();
         //Modal
         $('.modal').modal();
-        
+        //Tabs
+        $('ul.tabs').tabs();
+        // Esconder Menu ao clicar 
+        $(".hide-menu").click(function(){
+          $("button.collapse").sideNav("hide");  
+        });
+        // Autoplay
+        function autoplay(){
+            $(".carousel").carousel("next");
+            setTimeout(autoplay, 4000);
+        }
+        autoplay();
   }); 
 // Adicionando nav-color
   $(window).on("scroll", function(){
@@ -290,6 +601,17 @@
     }
   });
 </script>
+
+    <!--<?php
+    if(isset($_GET['status'])){
+        if($_GET['status'] == "sucesso"){
+            echo "<script>Materialize.toast('Enviado com sucesso!', 4000);</script>";
+        }else{
+            echo "<script>Materialize.toast('Erro ao enviar',4000);</script>";
+        }
+    }
+    ?>-->
+
 </body>
 
 </html> 

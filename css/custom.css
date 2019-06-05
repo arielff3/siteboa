@@ -1,6 +1,6 @@
 /*height 100%*/
 html, body {height:100%;}
-.bloco {min-height: 100%; padding-top: 94px;}
+.bloco {min-height: 100%; padding-top: 60px;}
 
 /* logo */
 .logo_text{font-size: 0; margin: 0;}
@@ -12,16 +12,23 @@ html, body {height:100%;}
 /* Menu */
 .navbar{background-color: transparent;transition: 1s linear;}
 .navbar ul a:hover{background-color: transparent; color:#2dc7d0}
-.nav-color{background-color:rgba(0,0,0,0.7); transition: 1s linear;}
+.nav-color{background-color:rgba(0,0,0,0.7); transition: 0.4s linear;}
 /* Home */
-.home {animation: mudarbg 20s infinite; background-image: url('../img/bg.jpg'); background-repeat: no-repeat; background-size: cover;}
+.home {animation: mudarbg 20s infinite; background-image: url('../img/bg.jpg'); background-repeat: no-repeat; background-size: cover;min-height: 100%;padding-top: 94px;}
 .banner h2 {font-size: 2.5rem; font-weight: 900; text-transform: uppercase;}
 .banner p {font-size: 1.2rem; line-height: 1.8rem;}
-
+/*Home - Animation */
+@keyframes mudarbg {
+  40% {background-image: url('../img/bg2.jpg');}
+  80% {background-image: url('../img/bg3.jpg');}
+  100% {background-image: url('../img/bg.jpg');}
+}
+/* Titulo e Parágrafo */
+.titulo{font-size: 2rem; text-transform: uppercase;}
+.titulo::after{content: ''; display: block; width: 100px; border-top: 1px solid #2dc7d0; margin: 15px auto;}
+.paragrafo {line-height: 1.8rem;}
 /* Sobre */
 .sobre{background-image: url(../img/textura1.png);}
-.sobre h2{font-size: 2rem; color: #212121; text-transform: uppercase;}
-.sobre h2::after{content: ''; display: block; width: 100px; border-top: 1px solid #2dc7d0; margin: 15px auto; }
 .sobre p{line-height: 1.8rem; text-align: justify;}
 .sobre .missao-visao-valores {padding: 20px 0; margin-top: 35px;}
 .sobre .missao-visao-valores .icon{color:#fff;}
@@ -30,24 +37,29 @@ html, body {height:100%;}
 
 /* Serviços */
 .servicos{background-image: url(../img/textura2.png)}
-.servicos h2{font-size: 2rem; color: #fff; text-transform: uppercase;}
-.servicos h2::after{content: ''; display: block; width: 100px; border-top: 1px solid #2dc7d0; margin: 15px auto; }
-.servicos p{color:#fff; line-height: 1.8rem}
-/*Home - Animation */
-@keyframes mudarbg {
-    40% {background-image: url('../img/bg2.jpg');}
-    80% {background-image: url('../img/bg3.jpg');}
-    100% {background-image: url('../img/bg.jpg');}
-}
+.servicos .btn-horario {padding-bottom: 20px;}
+/* Unidades */
+.unidades{background-image:url(../img/bg-unidades.jpg); background-repeat: no-repeat; background-size: cover;background-attachment: fixed;}
+.unidades article p{line-height:1.8rem}
 
-/* Custom nav */
-nav {
-    color: #fff;
-    background-color: #ee6e73;
-    width: 100%;
-    height: 94px;
-    line-height: 94px;
-  }
+/* Contato */
+.contato{background-image: url(../img/textura1.png);}
+.contato h4{font-size:1.2rem; text-transform: uppercase; font-weight: 900;}
+.contato .mapa{min-height: 500px;}
+.contato .mapa iframe{width: 100%;min-height: 550px; border:none;}
+.contato .redes{background-image: url(../img/prism.png); min-height: 550px; padding: 30px;width: 100%;border:none;}
+.contato .formulario{min-height: 550px; padding: 30px;width: 100%;border:none;}
+
+/* Depoimentos */
+.depoimentos{padding-bottom: 20px;}
+.depoimentos .titulo:after{border-color: #fff}
+.depoimentos h4{font-size:1.2rem; text-transform: uppercase; font-weight: 900;}
+.depoimentos i{color:#fff}
+.depoimentos img{width: 100px;}
+/*Rodapé*/
+.rodape{background-image:url(../img/bg-rodape.jpg);background-repeat: no-repeat;background-size:cover; min-height: 190px;} 
+.rodape img{width: 100px; padding-top: 40px;}
+/* Custom*/
   nav.nav-extended .nav-wrapper {
     min-height: 94px;
   }
@@ -55,11 +67,9 @@ nav {
     position: absolute;
     height: 94px;
   }
-  nav i,
+  nav, nav i,
   nav [class^="mdi-"], nav [class*="mdi-"],
-  nav i.material-icons {
-    display: block;
-    font-size: 24px;
+  nav i.material-icons, nav a.button-collapse i {
     height: 94px;
     line-height: 94px;
   }
@@ -74,11 +84,19 @@ nav {
 }
   
 @media only screen and (min-width: 993px) {
-    .banner{padding-top: 5rem;}
+.banner{padding-top: 5rem;}
 .banner h2 {font-size: 5em;}
 .container {width: 90%}
 }
 
 @media only screen and (max-width: 480px) {
-
+  .card-image-horizontal{display: none;}
 }
+.row {
+  margin-bottom: 0px;
+}
+.tabs {background-color: #222;}
+.tabs .tab a{color: #fff;}
+.tabs .tab a:hover, .tabs .tab a.active{color:#2dc7d0;}
+.tabs .indicator {background-color:#2dc7d0;}
+
